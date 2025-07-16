@@ -40,8 +40,8 @@ The **Schema-per-Tenant** model was chosen, as it offers an excellent balance be
 
 To manage complexity and align the code with business rules, the project follows a layered architecture:
 
-* **`Interface`**: Responsible for interaction with the outside world (REST Controllers, HTTP Interceptors).
-* **`Application`**: Orchestrates the application's use cases, acting as a thin layer between the interface and the domain.
+* **`Presentation`**: Responsible for interaction with the outside world (REST Controllers, HTTP Interceptors).
+* **`Application`**: Orchestrates the application's use cases, acting as a thin layer between the Presentation and the domain.
 * **`Domain`**: The heart of the software. It contains the entities, value objects, and pure business rules, with no dependencies on frameworks.
 * **`Infrastructure`**: Contains the technical implementation details, such as persistence logic with Spring Data JPA, multi-tenancy configuration, and database migrations with Flyway.
 
@@ -155,13 +155,13 @@ com.example.multitenantapp
 │   └── service     # Application services
 ├── domain          # The heart of the business logic
 │   ├── model       # Entities and Value Objects
-│   ├── repository  # Repository interfaces
+│   ├── repository  # Repository Presentations
 │   └── service     # Domain services
 ├── infrastructure  # Technical details and implementations
 │   ├── config      # Manual bean configuration (Hibernate, etc.)
 │   ├── multitenancy# Multi-Tenancy logic (Resolver, Provider)
 │   └── persistence # Repository implementations
-└── interface       # Entry layer (REST API)
+└── Presentation       # Entry layer (REST API)
     ├── rest
     │   ├── controller
     │   └── interceptor
