@@ -161,7 +161,7 @@ com.example.multitenantapp
 │   ├── config      # Manual bean configuration (Hibernate, etc.)
 │   ├── multitenancy# Multi-Tenancy logic (Resolver, Provider)
 │   └── persistence # Repository implementations
-└── Presentation       # Entry layer (REST API)
+└── presentation       # Entry layer (REST API)
     ├── rest
     │   ├── controller
     │   └── interceptor
