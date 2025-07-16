@@ -59,8 +59,8 @@ To manage complexity and align the code with business rules, the project follows
 1.  **Clone the repository:**
 
     ```bash
-    git clone https://github.com/your-user/spring-ddd-multitenant.git
-    cd spring-ddd-multitenant
+    https://github.com/erikyryang/multi-tenant-api.git
+    cd multi-tenant-api
     ```
 
 2.  **Start the PostgreSQL database with Docker:**
