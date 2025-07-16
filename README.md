@@ -6,19 +6,6 @@ It serves as a boilerplate or template for starting new projects that require da
 
 -----
 
-## Table of Contents
-
-* [Core Concept](https://www.google.com/search?q=%23-core-concept)
-* [Applied Architecture](https://www.google.com/search?q=%23-applied-architecture)
-* [Tech Stack](https://www.google.com/search?q=%23-tech-stack)
-* [Getting Started](https://www.google.com/search?q=%23-getting-started)
-* [How to Use and Test the API](https://www.google.com/search?q=%23-how-to-use-and-test-the-api)
-* [Package Structure (DDD)](https://www.google.com/search?q=%23-package-structure-ddd)
-* [Contributing](https://www.google.com/search?q=%23-contributing)
-* [License](https://www.google.com/search?q=%23-license)
-
------
-
 ## 🎯 Core Concept
 
 This project simulates the core of a generic service where multiple 'tenants' (organizations or users) can sign up to manage their own resources (e.g., projects, clients, documents, etc.). The main technical challenge is to ensure that a tenant's data is completely isolated and secure from others, even though everyone shares the same application instance.
