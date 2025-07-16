@@ -159,9 +159,3 @@ com.example.multitenantapp
 ## 🤝 Contributing
 
 Contributions are welcome\! Feel free to open an *issue* to report bugs or suggest improvements. If you wish to contribute with code, please open a *Pull Request*.
-
------
-
-## 📄 License
-
-This project is licensed under the MIT License. See the `LICENSE` file for more details.
