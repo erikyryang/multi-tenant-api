@@ -1,0 +1,25 @@
+application:
+  title: Multi-Tenancy
+  version: ${version}
+
+server:
+  port: 8080
+
+spring:
+  banner:
+    location: banner.txt
+  datasource:
+    url: jdbc:postgresql://localhost:5432/mydatabase
+    username: myuser
+    password: secret
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    properties:
+      hibernate:
+        ddl-auto: update
+        multiTenancy: SCHEMA
+        tenant_identifier_resolver: com.seuexemplo.faturaja.config.multitenancy.TenantIdentifierResolver
+        multi_tenant_connection_provider: com.seuexemplo.faturaja.config.multitenancy.SchemaMultiTenantConnectionProvider
+    hibernate:
+      ddl-auto: none
