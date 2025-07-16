@@ -43,7 +43,7 @@ To manage complexity and align the code with business rules, the project follows
 * **`Presentation`**: Responsible for interaction with the outside world (REST Controllers, HTTP Interceptors).
 * **`Application`**: Orchestrates the application's use cases, acting as a thin layer between the Presentation and the domain.
 * **`Domain`**: The heart of the software. It contains the entities, value objects, and pure business rules, with no dependencies on frameworks.
-* **`Infrastructure`**: Contains the technical implementation details, such as persistence logic with Spring Data JPA, multi-tenancy configuration, and database migrations with Flyway.
+* **`Infrastructure`**: Contains the technical implementation details, such as persistence logic with Spring Data JPA, multi-tenancy configuration.
 
 -----
 
@@ -54,7 +54,6 @@ To manage complexity and align the code with business rules, the project follows
 * **PostgreSQL 15** (Relational Database)
 * **Docker & Docker Compose** (Database environment management)
 * **Hibernate** (As the JPA provider for the Multi-Tenancy logic)
-* **Flyway** (For versioning and migration of each tenant's schema)
 * **Maven** (Dependency manager)
 * **Lombok** (For boilerplate code reduction)
 
@@ -107,7 +106,7 @@ First, create the schema and tables for a tenant named `org_a`.
 curl -X POST http://localhost:8080/tenants/org_a
 ```
 
-* **Expected Result:** A success message. Behind the scenes, Flyway has executed the migrations and created the tables within the `org_a` schema.
+* **Expected Result:** A success message. Behind the scenes and created the tables within the `org_a` schema.
 
 ### Step 2: Create a Resource (Client) for the New Tenant
 
@@ -161,7 +160,7 @@ com.example.multitenantapp
 │   ├── config      # Manual bean configuration (Hibernate, etc.)
 │   ├── multitenancy# Multi-Tenancy logic (Resolver, Provider)
 │   └── persistence # Repository implementations
-└── Presentation       # Entry layer (REST API)
+└── presentation       # Entry layer (REST API)
     ├── rest
     │   ├── controller
     │   └── interceptor
